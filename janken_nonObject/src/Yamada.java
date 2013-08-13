@@ -15,9 +15,9 @@ public class Yamada extends Player{
 	 * スーパークラスの同名メソッドをオーバーライドしてる
 	 * @return ジャンケンの手
 	 */
-	public int showHand(){
-//		必ずパーを出す
-		return PAPER;
-	}
+//	public int showHand(){
+////		必ずパーを出す
+//		return PAPER;
+//	}
 
 }

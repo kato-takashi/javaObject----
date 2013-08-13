@@ -14,6 +14,13 @@ public class Player {
 	//プレイヤーの勝った回数
 	private int winCount_=0;
 	
+//	与えられた戦略
+	private Tactics tactics_;
+//	プレイヤーに戦略を渡す。
+//	@param tactics 戦略
+	void setTactics(Tactics tactics){
+		tactics_ = tactics;
+	}
 	//プレイヤークラスの操作
 	/************
 	 * 
@@ -29,16 +36,8 @@ public class Player {
 	}
 	//ジャンケンの手をだす。@return ジャンケンの手
 	public int showHand(){
-		//
-		int hand = 0;
-		double randomNum = Math.random()*3;
-		if(randomNum<1){
-			hand = STONE;
-		}else if(randomNum<2){
-			hand = SICCORS;
-		}else if(randomNum<3) {
-			hand = PAPER;
-		}
+		//与えられた戦略を読んでジャンケンの手を決める
+		int hand = tactics_.readTactics();
 		return hand;
 	}
 	//審判から勝敗を聞く

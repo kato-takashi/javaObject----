@@ -15,9 +15,5 @@ public class Murata extends Player{
 	 * スーパークラスの同名メソッドをオーバーライドしてる
 	 * @return ジャンケンの手
 	 */
-	public int showHand(){
-//		必ずグーを出す
-		return STONE;
-	}
 
 }
